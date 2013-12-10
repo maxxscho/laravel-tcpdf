@@ -1,6 +1,7 @@
 <?php namespace Maxxscho\LaravelTcpdf;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\AliasLoader;
 
 class LaravelTcpdfServiceProvider extends ServiceProvider {
 
@@ -19,6 +20,8 @@ class LaravelTcpdfServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('maxxscho/laravel-tcpdf');
+
+		AliasLoader::getInstance()->alias('PDF', 'Maxxscho\LaravelTcpdf\LaravelTcpdf');
 	}
 
 	/**
@@ -28,7 +31,10 @@ class LaravelTcpdfServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['pdf'] = $this->app->share(function($app)
+		{
+			return new LaravelTcpdf;
+		});
 	}
 
 	/**
