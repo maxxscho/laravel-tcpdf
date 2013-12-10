@@ -1,0 +1,23 @@
+{
+    "name": "maxxscho/laravel-tcpdf",
+    "description": "",
+    "authors": [
+        {
+            "name": "Markus Schober",
+            "email": "maxx.schober@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Maxxscho\\LaravelTcpdf\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
