@@ -4,7 +4,7 @@ A simple [Laravel 4](http://www.laravel.com) service provider with some basic co
 
 ## Installation
 
-The Laravel TCPDF service provider can be installed via [composer](http://getcomposer.org) by requiring the `maxxscho/laravel-tcpdf` package in your project's `composer.json`.
+The Laravel TCPDF service provider can be installed via [composer](http://getcomposer.org) by requiring the `maxxscho/laravel-tcpdf` package in your project's `composer.json`. (The installation may take a while, because the package requires TCPDF. Sadly its .git folder is very heavy)
 
 ```json
 {
