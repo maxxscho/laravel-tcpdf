@@ -21,7 +21,7 @@ class LaravelTcpdfServiceProvider extends ServiceProvider {
 	{
 		$this->package('maxxscho/laravel-tcpdf');
 
-		AliasLoader::getInstance()->alias('PDF', 'Maxxscho\LaravelTcpdf\LaravelTcpdf');
+		AliasLoader::getInstance()->alias('PDF', 'Maxxscho\LaravelTcpdf\Facades\LaravelTcpdfFacade');
 	}
 
 	/**
@@ -44,7 +44,7 @@ class LaravelTcpdfServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('pdf');
 	}
 
 }
