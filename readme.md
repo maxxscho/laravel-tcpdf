@@ -25,6 +25,19 @@ Next, add the service provider to `app/config/app.php`.
 
 That's it! You're good to go.
 
+Here is a little example:
+
+```php
+PDF::SetTitle('Hello World');
+
+PDF::AddPage();
+
+PDF::Write(0, 'Hello World');
+
+PDF::Output('hello_world.pdf');
+```
+For a list of all available function take a look at the [TCPDF Documentation](http://www.tcpdf.org/doc/code/classTCPDF.html)
+ 
 ## Configuration
 
 Laravel-TCPDF comes with some basic configuration.
