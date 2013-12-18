@@ -17,7 +17,7 @@ class LaravelTcpdf {
      * @var array
      */
     private $config_constant_map = [
-        'K_PATH_CACHE' => 'cache_directory',
+        'K_PATH_CACHE'  => 'cache_directory',
         'K_PATH_IMAGES' => 'image_directory',
         'K_BLANK_IMAGE' => 'blank_image',
         'K_SMALL_RATIO' => 'small_font_ratio'
@@ -201,6 +201,10 @@ class LaravelTcpdf {
     }
 
 
+    /**
+     * Set the default page font
+     * @author Markus Schober
+     */
     protected function setFont()
     {
         $this->tcpdf->setFont(
