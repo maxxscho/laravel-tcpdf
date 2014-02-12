@@ -1,5 +1,7 @@
 # Laravel TCPDF
 
+[![Build Status](https://travis-ci.org/maxxscho/laravel-tcpdf.png?branch=master)](https://travis-ci.org/maxxscho/laravel-tcpdf)
+
 A simple [Laravel 4](http://www.laravel.com) service provider with some basic configuration for including the [TCPDF library](http://www.tcpdf.org/)
 
 ## Installation
