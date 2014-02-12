@@ -9,7 +9,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "~4",
+        "illuminate/support": "4.1.*",
         "tecnick.com/tcpdf": "6.*"
     },
     "autoload": {
