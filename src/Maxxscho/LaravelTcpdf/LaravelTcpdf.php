@@ -4,10 +4,12 @@ use \TCPDF;
 use Config;
 
 
-class LaravelTcpdf extends TCPDF {
+class LaravelTcpdf extends TCPDF
+{
 
     /**
      * TCPDF system constants that map to settings in our config file
+     *
      * @var array
      */
     private $config_constant_map = [
@@ -18,21 +20,14 @@ class LaravelTcpdf extends TCPDF {
     ];
 
 
+
     /**
      * Constructor
+     *
      * @author Markus Schober
      */
     public function __construct()
     {
-        /* override the default TCPDF config file
-        ------------------------------------- */
-        if(!defined('K_TCPDF_EXTERNAL_CONFIG')) {   
-            define('K_TCPDF_EXTERNAL_CONFIG', TRUE);
-        }
-
-        // set TCPDF system constants
-        $this->setTcpdfConstants();
-        
         // Initialize TCPDF
         parent::__construct(
             Config::get('laravel-tcpdf::page_orientation'),
@@ -76,33 +71,14 @@ class LaravelTcpdf extends TCPDF {
         );
 
         // default image scale
-        $this->setImageScale( Config::get('laravel-tcpdf::image_scale') );
+        $this->setImageScale(Config::get('laravel-tcpdf::image_scale'));
     }
 
-
-    /**
-     * Set some TCPDF system based on our config file
-     * @author Markus Schober
-     */
-    protected function setTcpdfConstants()
-    {
-        foreach( $this->config_constant_map as $const => $configkey ) {
-            if( !defined( $const ) ) {
-                if( is_string( Config::get('laravel-tcpdf::' . $configkey) ) ) {
-                    if( strlen( Config::get('laravel-tcpdf::' . $configkey) ) > 0 ) {
-                        define( $const, Config::get('laravel-tcpdf::' . $configkey) );
-                    }
-                }
-                else {
-                    define( $const, Config::get('laravel-tcpdf::' . $configkey) );
-                }
-            }
-        }
-    }
 
 
     /**
      * Set all the necessary header settings
+     *
      * @author Markus Schober
      */
     protected function headerSettings()
@@ -130,8 +106,10 @@ class LaravelTcpdf extends TCPDF {
     }
 
 
+
     /**
      * Set all the necessary footer settings
+     *
      * @author Markus Schober
      */
     protected function footerSettings()
@@ -152,8 +130,10 @@ class LaravelTcpdf extends TCPDF {
     }
 
 
+
     /**
      * Set the default cell settings
+     *
      * @author Markus Schober
      */
     protected function cellSettings()
@@ -168,14 +148,16 @@ class LaravelTcpdf extends TCPDF {
     }
 
 
+
     /**
      * Set default document properties
+     *
      * @author Markus Schober
      */
     protected function setDocumentProperties()
     {
-        $this->SetCreator( Config::get('laravel-tcpdf::creator') );
-        $this->SetAuthor( Config::get('laravel-tcpdf::author') );
+        $this->SetCreator(Config::get('laravel-tcpdf::creator'));
+        $this->SetAuthor(Config::get('laravel-tcpdf::author'));
     }
 
 }

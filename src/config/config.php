@@ -16,8 +16,8 @@ return [
     | Or, you can optionally specify a custom format in the form
     | of a two-element array containing the width and the height.
     */
-   
-    'page_format' => 'A4',
+
+    'page_format'                 => 'A4',
 
     /*
     |--------------------------------------------------------------------------
@@ -27,8 +27,8 @@ return [
     | P = portrait, L = landscape
     |
     */
-   
-    'page_orientation' => 'P',
+
+    'page_orientation'            => 'P',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,9 +40,9 @@ return [
     | 1 inch = 2.54 cm
     |
     */
-   
-    'page_unit' => 'mm',
-    
+
+    'page_unit'                   => 'mm',
+
     /*
     |--------------------------------------------------------------------------
     | Auto page break
@@ -51,8 +51,8 @@ return [
     | run out of room on the current page.
     | 
     */
-   
-    'page_break_auto' => true,
+
+    'page_break_auto'             => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -62,9 +62,10 @@ return [
     |
     */
 
-    'page_font' => 'helvetica',
-    'page_font_size' => 10,
-    'small_font_ratio' => 2/3,
+    'page_font'                   => 'helvetica',
+    'page_font_size'              => 10,
+    'small_font_ratio'            => 2 / 3,
+    'font_monospaced'             => 'courier',
 
     /*
     |--------------------------------------------------------------------------
@@ -72,8 +73,8 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'creator' => 'Laravel-TCPDF by Markus Schober',
-    'author' => 'Laravel-TCPDF by Markus Schober',
+    'creator'                     => 'Laravel-TCPDF by Markus Schober',
+    'author'                      => 'Laravel-TCPDF by Markus Schober',
 
     /*
     |--------------------------------------------------------------------------
@@ -83,10 +84,10 @@ return [
     | in the default unit of measure.
     */
 
-    'margin_top' => 30,
-    'margin_bottom' => 30, // currently not used
-    'margin_left' => 20,
-    'margin_right' => 20,
+    'margin_top'                  => 30,
+    'margin_bottom'               => 30, // currently not used
+    'margin_left'                 => 20,
+    'margin_right'                => 20,
 
     /*
     |--------------------------------------------------------------------------
@@ -97,14 +98,16 @@ return [
     |
     */
 
-    'header_on' => true,
-    'header_title' => 'Laravel-TCPDF',
-    'header_string' => 'by Markus Schober',
-    'header_font' => 'helvetica',
-    'header_font_size' => 10,
-    'header_logo' => '',
-    'header_logo_width' => 30,
-    'header_margin' => 5,
+    'header_on'                   => true,
+    'header_title'                => 'Laravel-TCPDF',
+    'header_string'               => 'by Markus Schober',
+    'header_font'                 => 'helvetica',
+    'header_font_size'            => 10,
+    'header_logo'                 => '',
+    'header_logo_width'           => 30,
+    'header_margin'               => 5,
+    'head_magnification'          => 1.1,
+    'title_magnification'         => 1.3,
 
     /*
     |--------------------------------------------------------------------------
@@ -114,10 +117,10 @@ return [
     |
     */
 
-    'footer_on' => true,
-    'footer_font' => 'helvetica',
-    'footer_font_size' => 8,
-    'footer_margin' => 10,
+    'footer_on'                   => true,
+    'footer_font'                 => 'helvetica',
+    'footer_font_size'            => 8,
+    'footer_margin'               => 10,
 
     /*
     |--------------------------------------------------------------------------
@@ -128,8 +131,8 @@ return [
     |
     */
 
-    'unicode' => true,
-    'encoding' => 'UTF-8',
+    'unicode'                     => true,
+    'encoding'                    => 'UTF-8',
 
     /*
     |--------------------------------------------------------------------------
@@ -140,8 +143,8 @@ return [
     | Relative path from the 'public' directory
     |
     */
-   
-    'image_directory' => 'packages/maxxscho/laravel-tcpdf/',
+
+    'image_directory'             => 'packages/maxxscho/laravel-tcpdf/',
 
     /*
     |--------------------------------------------------------------------------
@@ -152,7 +155,7 @@ return [
     |
     */
 
-    'blank_image' => 'packages/maxxscho/laravel-tcpdf/_blank.png',
+    'blank_image'                 => 'packages/maxxscho/laravel-tcpdf/_blank.png',
 
     /*
     |--------------------------------------------------------------------------
@@ -163,7 +166,7 @@ return [
     |
     */
 
-    'image_scale' => 4,
+    'image_scale'                 => 4,
 
     /*
     |--------------------------------------------------------------------------
@@ -172,9 +175,9 @@ return [
     | Fontsize-to-height ratio, cell padding
     |
     */
-   
-    'cell_height_ratio' => 1.25,
-    'cell_padding' => 0,
+
+    'cell_height_ratio'           => 1.25,
+    'cell_padding'                => 0,
 
     /*
     |--------------------------------------------------------------------------
@@ -187,6 +190,40 @@ return [
     | ADD TRAILING SLASH!
     |
     */
-    'enable_disk_cache' => false,
-    'cache_directory' => '',
+
+    'enable_disk_cache'           => false,
+    'cache_directory'             => '',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Thai Chars setting
+    |--------------------------------------------------------------------------
+    | Set to true to enable the special procedure used to avoid
+    | the overlappind of symbols on Thai language.
+    |
+    */
+
+    'thai_topchars'               => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Calls for methods in HTML Syntax
+    |--------------------------------------------------------------------------
+    | If true allows to call TCPDF methods using HTML syntax
+    | IMPORTANT: For security reason, disable this feature if you are printing user HTML content.
+    |
+    */
+
+    'tcpdf_calls_in_html'         => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Error settings
+    |--------------------------------------------------------------------------
+    | If true and PHP version is greater than 5, then the Error() method
+    | throw new exception instead of terminating the execution.
+    |
+    */
+    
+    'tcpdf_throw_exception_error' => false,
 ];
