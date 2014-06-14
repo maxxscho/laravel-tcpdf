@@ -29,6 +29,7 @@ Then add the Facade to `app/config/app.php`
 
 ```php
 'aliases' => [
+    //..
                 'PDF'         => 'Maxxscho\LaravelTcpdf\Facades\LaravelTcpdfFacade',
 ]
 ...
