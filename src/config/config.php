@@ -152,6 +152,7 @@ return [
     |--------------------------------------------------------------------------
     | This is the path and filename to the default (blank) image.
     | Publish the assets of this package and you're good to go
+    | $ php artisan asset:publish maxxscho/laravel-tcpdf
     |
     */
 
