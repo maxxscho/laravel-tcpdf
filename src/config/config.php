@@ -155,7 +155,7 @@ return [
     |
     */
 
-    'blank_image'                 => 'packages/maxxscho/laravel-tcpdf/_blank.png',
+    'blank_image'                 => 'packages/maxxscho/laravel-tcpdf/images/_blank.png',
 
     /*
     |--------------------------------------------------------------------------
