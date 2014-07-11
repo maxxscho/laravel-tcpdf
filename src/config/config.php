@@ -150,13 +150,14 @@ return [
     |--------------------------------------------------------------------------
     | TCPDF default (blank) image
     |--------------------------------------------------------------------------
-    | This is the path and filename to the default (blank) image.
+    | This is the path and filename to the default (blank) image,
+    | relative to the image directory, set above.
     | Publish the assets of this package and you're good to go
     | $ php artisan asset:publish maxxscho/laravel-tcpdf
     |
     */
 
-    'blank_image'                 => 'packages/maxxscho/laravel-tcpdf/images/_blank.png',
+    'blank_image'                 => '_blank.png',
 
     /*
     |--------------------------------------------------------------------------
