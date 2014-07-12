@@ -1,6 +1,8 @@
 {
     "name": "maxxscho/laravel-tcpdf",
-    "description": "",
+    "description": "A simple Laravel 4 service provider with some basic configuration for including the TCPDF library",
+    "keywords": ["laravel", "pdf", "tcpdf"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Markus Schober",
