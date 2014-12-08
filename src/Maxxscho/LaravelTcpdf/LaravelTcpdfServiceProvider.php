@@ -20,6 +20,7 @@ class LaravelTcpdfServiceProvider extends ServiceProvider
      * @var array
      */
     private $config_constant_map = [
+        'K_PATH_FONTS'                  => 'fonts_directory',
         'K_PATH_IMAGES'                 => 'image_directory',
         'PDF_HEADER_LOGO'               => 'header_logo',
         'PDF_HEADER_LOGO_WIDTH'         => 'header_logo_width',

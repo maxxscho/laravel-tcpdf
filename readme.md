@@ -60,3 +60,20 @@ Publish the assets, like so:
 ## Extend/Overwrite
 
 Extending or overwriting Laravel TCPDF is easy. Simply extend `\Maxxscho\LaravelTcpdf\LaravelTcpdf` with your own class.
+
+## Custom Fonts
+
+To add custom fonts set the fonts_directory in the config, relative to the public path. For example `'fonts/'`.
+You have to convert a font for TCPDF.
+
+Copy your custom font(s) to your fonts path, in our case `public/fonts/`.
+In your terminal do this:
+
+```
+vendor/maxxscho/laravel-tcpdf/vendor/tecnick.com/tcpdf/tools/tcpdf_addfont.php -i public/fonts/yourfont.ttf -o public/fonts
+```
+
+This uses a little tool provided by TCPDF to convert fonts for TCPDF.
+The `-i` flag is for the input fonts (comma-separated list)
+and the `-o` flag is for the output directory.
+Read here all about [TCPDF fonts](http://www.tcpdf.org/fonts.php) and how to convert them [the new way](http://queirozf.com/entries/adding-a-custom-font-to-tcpdf).

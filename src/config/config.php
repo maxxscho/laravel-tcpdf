@@ -161,6 +161,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | TCPDF Fonts directory
+    |--------------------------------------------------------------------------
+    | This is the fonts directory for TCPDF relative to the public directory.
+    | Leave it blank to use the default fonts of TCPDF.
+    */
+
+    'fonts_directory'             => '',
+
+    /*
+    |--------------------------------------------------------------------------
     | TCPDF image scale ratio
     |--------------------------------------------------------------------------
     | Image scale ratio (decimal format) used to adjust
@@ -226,6 +236,6 @@ return [
     | throw new exception instead of terminating the execution.
     |
     */
-    
+
     'tcpdf_throw_exception_error' => false,
 ];
