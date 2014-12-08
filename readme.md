@@ -64,8 +64,8 @@ Extending or overwriting Laravel TCPDF is easy. Simply extend `\Maxxscho\Laravel
 ## Custom Fonts
 
 To add custom fonts set the fonts_directory in the config, relative to the public path. For example `'fonts/'`.
-You have to convert a font for TCPDF.
 
+To use a custom font you have to convert a font for TCPDF.
 Copy your custom font(s) to your fonts path, in our case `public/fonts/`.
 In your terminal do this:
 
