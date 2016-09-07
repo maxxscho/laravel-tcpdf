@@ -164,10 +164,11 @@ class LaravelTcpdf extends TCPDF
      * Custom Header
      * 
      */
+     
     public function setHtmlHeader($htmlHeader) {
         $this->htmlHeader = $htmlHeader;
     }
-
+    //Customize according to your specification
     public function Header() {
         $this->WriteHTML($this->htmlHeader, true,false, false, false,'L'); 
 
