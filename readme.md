@@ -77,3 +77,8 @@ This uses a little tool provided by TCPDF to convert fonts for TCPDF.
 The `-i` flag is for the input fonts (comma-separated list)
 and the `-o` flag is for the output directory.
 Read here all about [TCPDF fonts](http://www.tcpdf.org/fonts.php) and how to convert them [the new way](http://queirozf.com/entries/adding-a-custom-font-to-tcpdf).
+
+
+## Custom Header
+"`PDF::setHtmlHeader($custom_header);
+  PDF::Header();`"
