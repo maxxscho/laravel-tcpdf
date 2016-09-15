@@ -6,7 +6,7 @@ use Config;
 
 class LaravelTcpdf extends TCPDF
 {
-
+    var $htmlHeader; //holds custom header string/html
     /**
      * TCPDF system constants that map to settings in our config file
      *
@@ -158,6 +158,20 @@ class LaravelTcpdf extends TCPDF
     {
         $this->SetCreator(Config::get('laravel-tcpdf::creator'));
         $this->SetAuthor(Config::get('laravel-tcpdf::author'));
+    }
+    
+    /**
+     * Custom Header
+     * 
+     */
+     
+    public function setHtmlHeader($htmlHeader) {
+        $this->htmlHeader = $htmlHeader;
+    }
+    //Customize according to your specification
+    public function Header() {
+        $this->WriteHTML($this->htmlHeader, true,false, false, false,'L'); 
+
     }
 
 }
