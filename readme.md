@@ -25,6 +25,16 @@ Next, add the service provider to `app/config/app.php`.
 ]
 ```
 
+Then add the Facade to `app/config/app.php`
+
+```php
+'aliases' => [
+    //..
+                'PDF'         => 'Maxxscho\LaravelTcpdf\Facades\LaravelTcpdfFacade',
+]
+...
+```
+
 That's it! You're good to go.
 
 Here is a little example:
