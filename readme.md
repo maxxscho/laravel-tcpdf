@@ -1,3 +1,5 @@
+**NOT MAINTAINED ANYMORE!!**
+
 # Laravel TCPDF
 
 [![Build Status](https://travis-ci.org/maxxscho/laravel-tcpdf.png?branch=master)](https://travis-ci.org/maxxscho/laravel-tcpdf)
