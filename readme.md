@@ -40,7 +40,7 @@ PDF::Write(0, 'Hello World');
 
 PDF::Output('hello_world.pdf');
 ```
-For a list of all available function take a look at the [TCPDF Documentation](http://www.tcpdf.org/doc/code/classTCPDF.html)
+For a list of all available function take a look at the [TCPDF Documentation](https://tcpdf.org/docs/srcdoc/TCPDF/classes-TCPDF/)
 
 ## Configuration
 
@@ -78,9 +78,11 @@ vendor/maxxscho/laravel-tcpdf/vendor/tecnick.com/tcpdf/tools/tcpdf_addfont.php -
 This uses a little tool provided by TCPDF to convert fonts for TCPDF.
 The `-i` flag is for the input fonts (comma-separated list)
 and the `-o` flag is for the output directory.
-Read here all about [TCPDF fonts](http://www.tcpdf.org/fonts.php) and how to convert them [the new way](http://queirozf.com/entries/adding-a-custom-font-to-tcpdf).
+Read here all about [TCPDF fonts](https://tcpdf.org/docs/srcdoc/TCPDF/classes-TCPDF-FONTS/) ([TCPDF old font doku](https://web.archive.org/web/20160306033331/http://www.tcpdf.org/fonts.php)) and how to convert them [the new way](http://queirozf.com/entries/adding-a-custom-font-to-tcpdf).
 
 
 ## Custom Header
-"`PDF::setHtmlHeader($custom_header);
-  PDF::Header();`"
+```
+  PDF::setHtmlHeader($custom_header);
+  PDF::AddPage();
+```
